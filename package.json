@@ -1,0 +1,24 @@
+{
+  "name": "@prestonarnold/log",
+  "version": "0.0.1",
+  "description": "A logging library, built with TypeScript.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "exit 0"
+  },
+  "keywords": [
+    "logging",
+    "typescript"
+  ],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "author": "Preston Arnold",
+  "license": "MIT"
+}

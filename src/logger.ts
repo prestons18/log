@@ -2,8 +2,8 @@
  * Simple OOP Logger
  */
 
-import { fg, reset } from './colours';
-import type { LogLevel, LoggerOptions, LogSink } from './types';
+import { fg, reset } from './colours.js';
+import type { LogLevel, LoggerOptions, LogSink } from './types.js';
 
 const LEVEL_RANK: Record<LogLevel, number> = { debug: 10, info: 20, warn: 30, error: 40 };
 const COLOR_MAP: Record<LogLevel, string> = {

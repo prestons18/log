@@ -22,7 +22,7 @@ export class Logger {
   private showTimestamp: boolean;
   private minLevel: LogLevel;
   private enabled: boolean;
-  private useColors: boolean;
+  private useColours: boolean;
   private sinks: LogSink[];
 
   constructor(options: LoggerOptions = {}) {
@@ -31,7 +31,7 @@ export class Logger {
     this.minLevel = options.level ?? 'debug';
     this.enabled = options.enabled ?? true;
     // auto-detect TTY if not explicitly provided
-    this.useColors = options.useColors ?? Boolean((globalThis as any).process?.stdout?.isTTY);
+    this.useColours = options.useColours ?? Boolean((globalThis as any).process?.stdout?.isTTY);
     this.sinks = (options.sinks && options.sinks.length ? options.sinks.slice() : [DEFAULT_SINK]);
   }
 
@@ -54,7 +54,7 @@ export class Logger {
     const pf = this.prefix ? `[${this.prefix}] ` : '';
     const msg = this.stringify(args);
     const hasAnsi = /\x1b\[[0-9;]*m/.test(msg);
-    const body = hasAnsi ? msg : (this.useColors ? `${COLOR_MAP[level]}${msg}${reset}` : msg);
+    const body = hasAnsi ? msg : (this.useColours ? `${COLOR_MAP[level]}${msg}${reset}` : msg);
     const line = `${ts}${pf}${body}`;
     for (const sink of this.sinks) sink(level, line, args as unknown[]);
   }

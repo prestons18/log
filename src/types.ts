@@ -5,7 +5,7 @@ export interface LoggerOptions {
   showTimestamp?: boolean;
   level?: LogLevel;
   enabled?: boolean;
-  useColors?: boolean;
+  useColours?: boolean;
   sinks?: LogSink[];
 }
 

@@ -1,6 +1,6 @@
 {
   "name": "@prestonarnold/log",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A logging library, built with TypeScript.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
